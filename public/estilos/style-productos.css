@@ -1,0 +1,365 @@
+/* Estilos para el área principal de la página */
+main {
+  padding-top: 120px; /* Espacio para el header fijo */
+  position: relative; /* Posicionamiento relativo */
+}
+
+.main-content-wrapper {
+  padding: 30px 20px; /* Padding superior e inferior */
+}
+
+/* --- SECCIÓN 5: BARRA DE BÚSQUEDA --- */
+/* Estilos para el contenedor de búsqueda y sugerencias */
+.search-container {
+  border-radius: 4px; /* Bordes redondeados */
+  position: relative; /* Para posicionar las sugerencias */
+  display: flex; /* Disposición horizontal */
+  justify-content: space-between; /* Espacio entre elementos */
+  align-items: center; /* Alineación vertical */
+  width: 50%; /* Ancho relativo */
+  padding: 10px; /* Espacio interno */
+  background-color: #f8f9fa; /* Fondo gris claro */
+  margin: 0 auto 20px; /* Centrado con margen inferior */
+  max-width: 600px; /* Ancho máximo para pantallas grandes */
+}
+
+#search-input:focus {
+  border-color: #1149f2; /* Color al hacer foco */
+  box-shadow: 0 0 5px rgba(44, 82, 130, 0.5); /* Sombra al foco */
+  background-color: #ffffff; /* Fondo blanco al foco */
+}
+
+#search-input:hover {
+  border-color: #4299e1; /* Color al hover */
+  background-color: #f0f5fa; /* Fondo claro al hover */
+}
+
+.search-suggestions {
+  position: absolute; /* Posicionado debajo del input */
+  top: 100%; /* Debajo del contenedor */
+  left: 0; /* Alineado a la izquierda */
+  right: 0; /* Alineado a la derecha */
+  background-color: white; /* Fondo blanco */
+  border: 1px solid #ddd; /* Borde gris */
+  border-top: none; /* Sin borde superior */
+  max-height: 300px; /* Altura máxima */
+  overflow-y: auto; /* Desplazamiento vertical si excede */
+  display: none; /* Oculto por defecto */
+  z-index: 1000; /* Encima de otros elementos */
+}
+
+.suggestion-item {
+  display: flex; /* Disposición horizontal */
+  align-items: center; /* Alineación vertical */
+  padding: 10px; /* Espacio interno */
+  cursor: pointer; /* Cursor de mano */
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0; /* Fondo gris claro al hover */
+}
+
+.suggestion-image {
+  width: 50px; /* Ancho fijo */
+  height: 50px; /* Altura fija */
+  object-fit: cover; /* Cubre el área */
+  margin-right: 10px; /* Espacio a la derecha */
+}
+
+.suggestion-text {
+  flex-grow: 1; /* Ocupa el espacio restante */
+}
+
+#search-input {
+  flex-grow: 1; /* Ocupa el espacio disponible */
+  padding: 8px 12px; /* Espacio interno */
+  border: 1px solid #ced4da; /* Borde gris */
+  border-radius: 4px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  outline: none; /* Sin contorno al foco */
+}
+
+#search-button,
+#grid-view,
+#list-view {
+  padding: 5px; /* Espacio interno */
+  background-color: #fff; /* Fondo blanco */
+  border: 1px solid #ced4da; /* Borde gris */
+  cursor: pointer; /* Cursor de mano */
+}
+
+#search-button {
+  border-radius: 4px; /* Bordes redondeados */
+  margin-left: 3px; /* Espacio a la izquierda */
+}
+
+#grid-view {
+  margin-left: 5px; /* Espacio a la izquierda */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+#list-view {
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+.view-options button.active {
+  background-color: #e9ecef; /* Fondo gris claro cuando activo */
+}
+
+/* --- SECCIÓN 6: CONTENEDOR DE PRODUCTOS --- */
+/* Estilos para el área de productos y la barra lateral */
+.productos-container {
+  display: flex; /* Disposición horizontal */
+  max-width: 1200px; /* Ancho máximo */
+  margin: 0 auto; /* Centrado */
+  padding: 20px; /* Espacio interno */
+  position: relative; /* Posicionamiento relativo */
+}
+
+.sidebar {
+  width: 250px; /* Ancho fijo */
+  margin-right: 20px; /* Espacio a la derecha */
+}
+
+.categorias a {
+  text-decoration: none; /* Sin subrayado */
+  color: inherit; /* Color heredado */
+  transition: transform 0.2s ease; /* Transición al hover */
+  display: inline-block; /* Comportamiento de bloque inline */
+}
+
+.categorias a:hover {
+  text-decoration: underline; /* Subrayado al hover */
+  transform: scale(1.1); /* Aumenta ligeramente */
+}
+
+.categoria {
+  margin-bottom: 10px; /* Espacio inferior */
+}
+
+.categoria-header {
+  display: flex; /* Disposición horizontal */
+  justify-content: space-between; /* Espacio entre elementos */
+  align-items: center; /* Alineación vertical */
+  cursor: pointer; /* Cursor de mano */
+}
+
+.toggle-submenu {
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  font-size: 12px; /* Tamaño de fuente */
+  cursor: pointer; /* Cursor de mano */
+}
+
+.categoria-submenu {
+  max-height: 0; /* Oculto por defecto */
+  overflow: hidden; /* Contenido oculto */
+  transition: max-height 0.3s ease-out; /* Transición de apertura */
+}
+
+.categoria-submenu.active {
+  max-height: 500px; /* Altura máxima al abrir */
+  transition: max-height 0.6s ease-in; /* Transición de cierre */
+}
+
+.main-content {
+  flex: 1; /* Ocupa el espacio restante */
+}
+
+.grid-productos {
+  display: grid; /* Disposición en cuadrícula */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Columnas flexibles */
+  gap: 20px; /* Espacio entre productos */
+  position: relative; /* Posicionamiento relativo */
+}
+
+.producto {
+  border: 1px solid #ddd; /* Borde gris */
+  padding: 15px; /* Espacio interno */
+  text-align: center; /* Texto centrado */
+}
+
+.producto img {
+  width: 100%; /* Ancho completo */
+  height: 180px; /* Altura fija por defecto */
+  object-fit: contain; /* Mostrar imagen completa sin recorte */
+  max-width: 100%; /* Evita desbordamiento */
+}
+
+.producto.list-view {
+  display: flex; /* Disposición horizontal en vista de lista */
+  align-items: center; /* Alineación vertical */
+  padding: 10px; /* Espacio interno */
+  border-bottom: 1px solid #eee; /* Borde inferior */
+}
+
+.producto.list-view img {
+  width: 200px; /* Ancho fijo en vista de lista */
+  height: auto; /* Altura automática */
+  margin-right: 20px; /* Espacio a la derecha */
+}
+
+.producto.list-view .product-details {
+  flex: 1; /* Ocupa el espacio restante */
+}
+
+.quantity-controls {
+  display: flex; /* Disposición horizontal */
+  align-items: center; /* Alineación vertical */
+  justify-content: center; /* Centrado horizontal */
+  margin-top: 10px; /* Espacio superior */
+}
+
+.quantity-btn {
+  width: 30px; /* Ancho fijo */
+  height: 30px; /* Altura fija */
+  background-color: #f2f2f2; /* Fondo gris claro */
+  border: 1px solid #ccc; /* Borde gris */
+  border-radius: 4px; /* Bordes redondeados */
+  color: #333; /* Color del texto */
+  font-size: 18px; /* Tamaño de fuente */
+  cursor: pointer; /* Cursor de mano */
+  display: flex; /* Centrado del contenido */
+  align-items: center; /* Alineación vertical */
+  justify-content: center; /* Alineación horizontal */
+}
+
+.quantity-btn:hover {
+  background-color: #e0e0e0; /* Fondo más oscuro al hover */
+}
+
+.quantity-input {
+  width: 40px; /* Ancho fijo */
+  height: 30px; /* Altura fija */
+  text-align: center; /* Texto centrado */
+  font-size: 16px; /* Tamaño de fuente */
+  border: 1px solid #ccc; /* Borde gris */
+  margin: 0 5px; /* Espacio lateral */
+}
+
+/* --- SECCIÓN 7: PAGINACIÓN --- */
+/* Estilos para la navegación de páginas */
+.navbar {
+  display: flex; /* Disposición horizontal */
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Alineación vertical */
+  background-color: #f8f8f8; /* Fondo gris claro */
+  padding: 10px 0; /* Espacio vertical */
+}
+
+.navbar ul {
+  list-style-type: none; /* Sin viñetas */
+  padding: 0; /* Sin padding */
+  margin: 0; /* Sin márgenes */
+  display: flex; /* Disposición horizontal */
+  align-items: center; /* Alineación vertical */
+}
+
+.navbar li {
+  margin: 0 5px; /* Espacio lateral */
+}
+
+.nav-link {
+  text-decoration: none; /* Sin subrayado */
+  color: #333; /* Color del texto */
+  padding: 10px 15px; /* Espacio interno */
+  display: block; /* Comportamiento de bloque */
+  border: 1px solid #ddd; /* Borde gris */
+  border-radius: 4px; /* Bordes redondeados */
+  transition: background-color 0.3s, color 0.3s; /* Transiciones al hover */
+}
+
+.nav-link.selected,
+.nav-link:hover {
+  background-color: #e07a5f; /* Fondo naranja al seleccionar o hover */
+  color: white; /* Texto blanco */
+  border-color: #e07a5f; /* Borde naranja */
+}
+
+.nav-link.disabled {
+  pointer-events: none; /* Desactiva clics */
+  color: #999; /* Texto gris */
+  background-color: #f0f0f0; /* Fondo gris claro */
+  border-color: #ccc; /* Borde gris */
+}
+
+/* Ajustes para diferentes tamaños de pantalla */
+@media (max-width: 1024px) {
+  .grid-productos {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Columnas más pequeñas */
+  }
+
+  .search-container {
+    width: 70%; /* Ancho mayor para tabletas */
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 60px; /* Altura reducida */
+    transition: transform 0.2s ease-in-out; /* Transición más rápida */
+  }
+
+  .hamburger {
+    display: block; /* Visible en pantallas pequeñas */
+  }
+
+  .nav-links {
+    position: fixed; /* Fijo para el menú lateral */
+    top: 0; /* Desde la parte superior */
+    right: -250px; /* Fuera de la pantalla por defecto */
+    height: 100vh; /* Altura completa */
+    background: rgba(255, 255, 255, 0.95); /* Fondo semitransparente */
+    backdrop-filter: blur(10px); /* Desenfoque */
+    flex-direction: column; /* Disposición vertical */
+    padding: 4rem 1.5rem; /* Espacio interno */
+    width: 250px; /* Ancho fijo */
+    z-index: 1000; /* Encima de otros elementos */
+  }
+
+  .nav-links.active {
+    right: 0; /* Desplegado al activarse */
+  }
+
+  .search-container {
+    width: 90%; /* Ancho casi completo */
+  }
+
+  .sidebar {
+    width: 100%; /* Ancho completo */
+    margin-bottom: 20px; /* Espacio inferior */
+  }
+
+  .grid-productos {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Columnas más pequeñas */
+  }
+
+  .producto img {
+    height: 150px; /* Altura reducida para imágenes */
+  }
+
+  .logo img {
+    margin-top: 15px; /* Ajuste de posición */
+    max-width: 120px; /* Tamaño reducido */
+  }
+
+  .nav-links li {
+    margin: 1rem 0; /* Espacio entre elementos */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-productos {
+    grid-template-columns: 1fr; /* Una sola columna */
+  }
+
+  .search-container {
+    width: 95%; /* Ancho casi completo */
+    margin: 5px auto 15px; /* Márgenes ajustados */
+  }
+
+  .producto img {
+    height: 120px; /* Altura aún más pequeña */
+  }
+
+}

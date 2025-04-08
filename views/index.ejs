@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProveCol</title>
+    <link rel="stylesheet" href="/estilos/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="/">
+            <img src="/imagenes/logoProvecolSinFondo.png" alt="Logo" />
+          </a>
+        </div>
+        <button id="menu-btn" class="hamburger">
+          <i id="fas fa-bars"></i>
+        </button>
+
+        <ul id="mobile-menu" class="nav-links hidden">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="#contact">Contacto</a></li>
+          <li>
+            <a
+              href="inicio_sesion.html"
+              class="nav-link login-icon"
+              aria-label="Iniciar Sesión"
+              data-tooltip="Iniciar Sesión"
+            >
+              <i class="fas fa-user"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero">
+        <div class="hero-content">
+          <h1>Todo en materiales de construcción</h1>
+          <p>
+            Descubre una grán variedad de materiales y equipos profesionales
+            para el sector de la construcción
+          </p>
+          <a href="#productos"
+            ><button class="cta-button">Explorar Productos</button>
+          </a>
+        </div>
+      </section>
+
+      <!-- Carrusel de productos -->
+      <section id="productos"></section>
+      <section class="product-carousel">
+        <h1 class="section-title">Todas nuestras categorías</h1>
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <!-- Producto 1 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img
+                  src="/imagenes/herramienta eléctrica.jpg"
+                  alt="Producto 1"
+                />
+                <h3>HERRAMIENTAS ELÉCTRICAS</h3>
+              </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img src="/imagenes/pinza.png" alt="HERRAMIENTAS" />
+                <h3>HERRAMIENTAS MANUALES</h3>
+              </div>
+            </div>
+            <!-- Producto 4 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img src="/imagenes/epóxicos.png" alt="epoxicos" />
+                <h3>PEGANTES Y AHDESIVOS</h3>
+              </div>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img src="/imagenes/pintura.jpg" alt="Producto 1" />
+                <h3>PINTURA</h3>
+              </div>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img src="/imagenes/eléctricos.png" alt="Producto 1" />
+                <h3>ELÉCTRICOS E ILUMINACION</h3>
+              </div>
+            </div>
+
+            <!-- Producto 7 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img src="/imagenes/tuberia.jpg" alt="Producto 1" />
+                <h3>TUBERÍA</h3>
+              </div>
+            </div>
+
+            <!-- Producto 8 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img src="/imagenes/abrasivos.webp" alt="Producto 1" />
+                <h3>ABRASIVOS</h3>
+              </div>
+            </div>
+            <!-- Producto 9 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img
+                  src="/imagenes/agrícola.jpg
+                "
+                  alt="Producto 1"
+                />
+                <h3>AGRICOLA</h3>
+              </div>
+            </div>
+
+            <!-- Producto 10 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img src="/imagenes/grifería.jpg" alt="Producto 1" />
+                <h3>GRIFERIA</h3>
+              </div>
+            </div>
+
+            <!-- Producto 1 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img
+                  src="/imagenes/herramienta eléctrica.jpg"
+                  alt="Producto 1"
+                />
+                <h3>HERRAMIENTAS ELÉCTRICAS</h3>
+              </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img src="/imagenes/pinza.png" alt="HERRAMIENTAS" />
+                <h3>HERRAMIENTAS MANUALES</h3>
+              </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img src="/imagenes/epóxicos.png" alt="epoxicos" />
+                <h3>PEGANTES Y AHDESIVOS</h3>
+              </div>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img src="/imagenes/pintura.jpg" alt="Producto 1" />
+                <h3>PINTURA</h3>
+              </div>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img src="/imagenes/eléctricos.png" alt="Producto 1" />
+                <h3>ELÉCTRICOS E ILUMINACION</h3>
+              </div>
+            </div>
+
+            <!-- Producto 7 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img src="/imagenes/tuberia.jpg" alt="Producto 1" />
+                <h3>TUBERÍA</h3>
+              </div>
+            </div>
+
+            <!-- Producto 8 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img src="imagenes/abrasivos.webp" alt="Producto 1" />
+                <h3>ABRASIVOS</h3>
+              </div>
+            </div>
+
+            <!-- Producto 9 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img
+                  src="/imagenes/agrícola.jpg
+                "
+                  alt="Producto 1"
+                />
+                <h3>AGRICOLA</h3>
+              </div>
+            </div>
+
+            <!-- Producto 10 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img src="/imagenes/grifería.jpg" alt="Producto 1" />
+                <h3>GRIFERIA</h3>
+              </div>
+            </div>
+
+            <!-- Producto 1 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img
+                  src="/imagenes/herramienta eléctrica.jpg"
+                  alt="Producto 1"
+                />
+                <h3>HERRAMIENTAS ELÉCTRICAS</h3>
+              </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img src="/imagenes/pinza.png" alt="HERRAMIENTAS" />
+                <h3>HERRAMIENTAS MANUALES</h3>
+              </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img src="/imagenes/epóxicos.png" alt="epoxicos" />
+                <h3>PEGANTES Y AHDESIVOS</h3>
+              </div>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img src="/imagenes/pintura.jpg" alt="Producto 1" />
+                <h3>PINTURA</h3>
+              </div>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img src="/imagenes/eléctricos.png" alt="Producto 1" />
+                <h3>ELÉCTRICOS E ILUMINACION</h3>
+              </div>
+            </div>
+
+            <!-- Producto 7 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img src="/imagenes/tuberia.jpg" alt="Producto 1" />
+                <h3>TUBERÍA</h3>
+              </div>
+            </div>
+
+            <!-- Producto 8 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img src="/imagenes/abrasivos.webp" alt="Producto 1" />
+                <h3>ABRASIVOS</h3>
+              </div>
+            </div>
+
+            <!-- Producto 9 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img
+                  src="/imagenes/agrícola.jpg
+                "
+                  alt="Producto 1"
+                />
+                <h3>AGRICOLA</h3>
+              </div>
+            </div>
+
+            <!-- Producto 10 -->
+            <div class="carousel-item">
+              <div class="product-card">
+                <img src="/imagenes/grifería.jpg" alt="Producto 1" />
+                <h3>GRIFERIA</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controles del carrusel -->
+          <button class="carousel-control prev">‹</button>
+          <button class="carousel-control next">›</button>
+        </div>
+      </section>
+
+      <section id="features">
+        <div class="feature">
+          <i class="fas fa-truck"></i>
+          <h3>Entrega Rápida</h3>
+          <p>Envío seguro y rápido en todo el país</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Calidad Garantizada</h3>
+          <p>Todos nuestros productos son testeados y certificados</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-headset"></i>
+          <h3>Soporte 24/7</h3>
+          <p>Todo un equipo profesional a su servicio</p>
+        </div>
+      </section>
+
+      <!-- Seccion de contacto -->
+      <section id="contact">
+        <h2>Contáctanos</h2>
+        <form id="contact-form">
+          <input type="text" placeholder="Nombre" required />
+          <input type="email" placeholder="Correo electrónico" required />
+          <input type="number" placeholder="Contacto" required />
+          <textarea placeholder="Mensaje..." required></textarea>
+          <button type="submit">Enviar Mensaje</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Sobre nosostros</h4>
+          <p>Somos distribuidores de todos los materiales de construcción</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contacto</h4>
+          <p>
+            Correo electrónico:
+            <a href="mailto:provecol.pasto@hotmail.com" target="_blank"
+              ><br />provecol.pasto@hotmail.com</a
+            >
+          </p>
+          <p>celular: 313 6144980</p>
+        </div>
+
+        <div class="footer-section">
+          <!-- Sección: Redes sociales -->
+          <h4>Síguenos</h4>
+          <div class="social-links">
+            <a
+              href="https://www.facebook.com/share/16Bt52oJbi/"
+              target="_blank"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/provecolpasto?igsh=b2w4MTV5MnI0dmEy"
+              target="_blank"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 ProveCol. Todos los derechos reservados.</p>
+        <p>Hecho por Gustavo Piedrahita 🐈‍⬛</p>
+      </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/573136144980" target="_blank" class="whatsapp-float">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script type="module" src="/js/main.js"></script>
+    <script src="/js/mensajeRegistro.js"></script>
+    
+  </body>
+</html>

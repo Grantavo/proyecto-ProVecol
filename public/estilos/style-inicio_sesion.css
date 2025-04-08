@@ -1,0 +1,383 @@
+/* Importar fuentes externas de Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+/* Variables raíz para estilos consistentes en toda la aplicación */
+:root {
+  --primary: #4978f0; /* Color primario de la marca */
+  --primary-light: #e1eef5; /* Tono claro del color primario */
+  --secondary: #1d1d1d; /* Color secundario para texto o acentos */
+  --background: #f4f1ff; /* Color de fondo principal */
+  --text: #1f2346; /* Color de texto primario */
+}
+
+/* Estilos base para el body */
+body {
+  font-size: 16px; /* Tamaño de fuente predeterminado para el cuerpo */
+}
+
+/* Resetear estilos predeterminados del navegador y aplicar fuente global */
+* {
+  margin: 0; /* Eliminar márgenes predeterminados */
+  padding: 0; /* Eliminar rellenos predeterminados */
+  box-sizing: border-box; /* Asegurar que el relleno y el borde se incluyan en el ancho y alto total del elemento */
+  font-family: "Lato", sans-serif; /* Aplicar la fuente Lato como fuente principal */
+}
+
+/* -------------------------------------------------- */
+/* Sección de Diseño del Formulario                   */
+/* -------------------------------------------------- */
+
+/* Contenedor principal para el formulario de inicio de sesión y el lado de información */
+.form-wrapper {
+  position: relative; /* Necesario para el posicionamiento absoluto de los elementos secundarios */
+  display: grid; /* Utilizar el diseño de cuadrícula para los lados del formulario e información */
+  grid-template-columns: 4fr 3fr; /* Definir la proporción de las dos columnas */
+  margin: 0 auto; /* Centrar el contenedor horizontalmente */
+}
+
+/* Estilos para el lado del formulario del diseño */
+.form-side {
+  padding: 9.25rem 3rem 3rem 2rem; /* Relleno superior, derecho, inferior, izquierdo */
+  display: flex; /* Habilitar el diseño flexbox */
+  justify-content: center; /* Centrar el contenido horizontalmente */
+  align-items: start; /* Alinear los elementos en la parte superior */
+}
+
+/* -------------------------------------------------- */
+/* Estilos del Formulario                             */
+/* -------------------------------------------------- */
+
+/* Contenedor principal para el formulario de inicio de sesión */
+.my-form {
+  bottom: 100px;
+  display: flex; /* Habilitar el diseño flexbox */
+  flex-direction: column; /* Colocar los elementos del formulario verticalmente */
+  justify-content: start; /* Alinear los elementos en la parte superior */
+  position: relative; /* Necesario para posicionar elementos dentro */
+  gap: 1rem; /* Espacio entre los elementos del formulario */
+  max-width: 28.75rem; /* Ancho máximo del formulario */
+  width: 100%; /* Hacer que el formulario ocupe todo el ancho de su contenedor */
+  padding: 3rem 2rem; /* Relleno superior, derecho, inferior, izquierdo */
+  height: fit-content; /* Ajustar la altura según el contenido */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; /* Sutil sombra de caja */
+}
+
+/* -------------------------------------------------- */
+/* Sección de Bienvenida del Login                      */
+/* -------------------------------------------------- */
+
+/* Estilos para la fila que contiene el texto de bienvenida */
+.login-welcome-row {
+  text-align: center; /* Centrar el texto dentro de esta fila */
+}
+
+/* -------------------------------------------------- */
+/* Sección de Botones de Inicio de Sesión Social      */
+/* -------------------------------------------------- */
+
+/* Contenedor para los botones de inicio de sesión social */
+.socials-row {
+  display: flex; /* Habilitar el diseño flexbox para los botones */
+  gap: 1rem; /* Espacio entre los botones de inicio de sesión social */
+  flex-wrap: wrap; /* Permitir que los botones pasen a la siguiente línea en pantallas más pequeñas */
+}
+
+/* Estilos para los iconos de redes sociales */
+.socials-row img {
+  width: 1.5rem; /* Establecer el ancho de los iconos de redes sociales */
+  height: 1.5rem; /* Establecer la altura de los iconos de redes sociales */
+}
+
+/* Estilos para cada botón de inicio de sesión social individual (etiqueta de anclaje) */
+.socials-row > a {
+  padding: 0.5rem; /* Relleno alrededor del contenido del botón */
+  border-radius: 0.5rem; /* Bordes redondeados para los botones */
+  width: 100%; /* Hacer que cada botón ocupe todo el ancho de su contenedor */
+  min-height: 3rem; /* Altura mínima para los botones */
+  display: flex; /* Habilitar el diseño flexbox para el contenido del botón */
+  gap: 0.75rem; /* Espacio entre el icono y el texto */
+  justify-content: center; /* Centrar el contenido horizontalmente */
+  align-items: center; /* Centrar el contenido verticalmente */
+  text-decoration: none; /* Eliminar la decoración de texto predeterminada */
+  font-size: 1.1rem; /* Tamaño de fuente para el texto del botón */
+  color: var(--text); /* Color del texto utilizando la variable definida */
+  border: 1px solid var(--primary-light); /* Estilo del borde utilizando la variable definida */
+  font-weight: 700; /* Hacer que el texto del botón sea negrita */
+}
+
+/* Efecto hover para los botones de inicio de sesión social */
+.socials-row > a:hover {
+  border: 1px solid var(--primary); /* Cambiar el color del borde al pasar el ratón */
+}
+
+/* -------------------------------------------------- */
+/* Sección del Separador                               */
+/* -------------------------------------------------- */
+
+/* Contenedor para la línea divisoria y el texto */
+.divider {
+  display: flex; /* Habilitar el diseño flexbox para los elementos del separador */
+  flex-direction: row; /* Colocar los elementos en fila */
+  color: var(--secondary); /* Color del texto del separador */
+  gap: 1rem; /* Espacio entre la línea divisoria y el texto */
+  align-items: center; /* Alinear verticalmente la línea divisoria y el texto */
+}
+
+/* Estilo para la línea divisoria horizontal */
+.divider-line {
+  width: 100%; /* Hacer que la línea ocupe todo el ancho de su contenedor */
+  height: 1px; /* Establecer la altura de la línea */
+  background-color: var(--secondary); /* Color de fondo de la línea */
+  opacity: 0.2; /* Hacer que la línea sea ligeramente transparente */
+}
+
+/* Estilos lado derecho*/
+.info-side {
+  position: relative; /* Necesario para posicionar elementos dentro */
+  height: 100vh; /* Hacer que el lado de información ocupe toda la altura de la ventana gráfica */
+  top: 50px; /* Ajustar la posición superior */
+  width: 100%; /* Ocupar todo el ancho de su contenedor */
+  right: 50px; /* Ajustar la posición derecha */
+  padding: 1rem; /* Relleno alrededor del contenido */
+  display: flex; /* Habilitar el diseño flexbox */
+  flex-direction: column; /* Colocar los elementos verticalmente */
+  justify-content: start; /* Alinear los elementos en la parte superior */
+  align-items: center; /* Centrar los elementos horizontalmente */
+  background-color: var(
+    --background
+  ); /* Color de fondo utilizando la variable definida */
+}
+
+/* Estilos para el mensaje de bienvenida en el lado de información */
+.info-side .welcome-message h2 {
+  text-align: center; /* Centrar el texto del encabezado */
+  margin-top: -60px; /* Ajustar el margen superior */
+  color: #1d1d1d; /* Color del texto del encabezado */
+  font-size: 1.8rem; /* Tamaño de fuente del encabezado */
+}
+
+/* Estilos para los párrafos en el lado de información */
+.info-side p {
+  font-size: 1.2rem; /* Tamaño de fuente del texto del párrafo */
+  text-align: center; /* Centrar el texto del párrafo */
+}
+
+/* Estilos para la imagen en el lado de información */
+.info-side img {
+  max-width: 53.75rem; /* Ancho máximo de la imagen */
+  width: 100%; /* Hacer que la imagen ocupe todo el ancho de su contenedor */
+  height: 100%; /* Hacer que la imagen ocupe toda la altura de su contenedor */
+  object-fit: cover; /* Mantener la relación de aspecto y cubrir todo el contenedor */
+}
+
+/* Estilos para el encabezado principal en el lado de información */
+.info-side h2 {
+  font-size: 2.5rem; /* Tamaño de fuente del encabezado */
+  color: white; /* Color del texto del encabezado */
+}
+
+/* Estilos para el logo */
+.logo {
+  height: 3rem; /* Establecer la altura del logo */
+  position: absolute; /* Posicionar el logo relativamente a su ancestro posicionado más cercano */
+  top: 1.25rem; /* Distancia desde la parte superior */
+  left: 1.25rem; /* Distancia desde la izquierda */
+}
+
+/* Estilos para la imagen de bienvenida del formulario */
+.form-welcome {
+  height: 5rem; /* Establecer la altura de la imagen de bienvenida */
+  width: 5rem; /* Establecer el ancho de la imagen de bienvenida */
+  border-radius: 50%; /* Hacer que la imagen sea circular */
+  object-fit: cover; /* Mantener la relación de aspecto y cubrir todo el contenedor */
+}
+
+/* Contenedor para la imagen y el texto de bienvenida del formulario */
+.form-welcome-row {
+  display: flex; /* Habilitar el diseño flexbox */
+  width: 100%; /* Ocupar todo el ancho de su contenedor */
+  flex-direction: column; /* Colocar los elementos verticalmente */
+  gap: 0.5rem; /* Espacio entre la imagen y el texto */
+}
+
+/* Estilos para el botón principal del formulario */
+.my-form__button {
+  background-color: var(
+    --primary
+  ); /* Color de fondo utilizando la variable definida */
+  color: white; /* Color del texto */
+  white-space: nowrap; /* Evitar que el texto se envuelva */
+  border: none; /* Eliminar el borde predeterminado del botón */
+  display: flex; /* Habilitar el diseño flexbox para el contenido del botón */
+  justify-content: center; /* Centrar el contenido horizontalmente */
+  align-items: center; /* Centrar el contenido verticalmente */
+  margin-top: 1rem; /* Margen superior */
+  line-height: 3.125rem; /* Establecer la altura de línea para el centrado vertical */
+  outline: none; /* Eliminar el contorno de enfoque predeterminado */
+  font-size: 1.125rem; /* Tamaño de fuente */
+  letter-spacing: 0.025em; /* Espaciado entre letras */
+  text-decoration: none; /* Eliminar la decoración de texto predeterminada */
+  cursor: pointer; /* Cambiar el cursor a un puntero al pasar el ratón */
+  font-weight: 800; /* Hacer que el texto sea negrita */
+  min-height: 3.125rem; /* Altura mínima */
+  width: 100%; /* Ocupar todo el ancho de su contenedor */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Sutil sombra de caja */
+  transition: all 0.3s ease; /* Transición suave para los efectos hover */
+  -webkit-transition: all 0.3s ease; /* Prefijo de proveedor para navegadores más antiguos */
+}
+
+/* Estilos para las acciones del formulario (olvidé la contraseña, etc.) */
+.my-form__actions {
+  display: flex; /* Habilitar el diseño flexbox */
+  flex-direction: column; /* Colocar los elementos verticalmente */
+  color: var(--secondary); /* Color del texto */
+  gap: 1rem; /* Espacio entre las acciones */
+  margin-top: 0.5rem; /* Margen superior */
+}
+
+/* Estilos para los enlaces dentro de las acciones del formulario */
+.my-form__actions a {
+  color: #4978f0; /* Color del enlace */
+  font-weight: 600; /* Hacer que el texto sea semi-negrita */
+  text-decoration: none; /* Eliminar la decoración de texto predeterminada */
+  border-bottom: 2px solid transparent; /* Agregar un borde inferior transparente para el efecto hover */
+  transition: border-color 0.3s ease-in-out; /* Transición suave para el color del borde */
+}
+
+/* Efecto hover para los enlaces dentro de las acciones del formulario */
+.my-form__actions a:hover {
+  border-bottom-color: blue; /* Cambiar el color del borde inferior al pasar el ratón */
+}
+
+/* Estilos para una fila dentro del formulario (potencialmente para botones de inicio de sesión social - considerar renombrar) */
+.my-form__row {
+  display: flex; /* Habilitar el diseño flexbox */
+  flex-direction: column; /* Colocar los elementos verticalmente */
+  justify-content: space-between; /* Distribuir el espacio entre los elementos */
+  align-items: center; /* Centrar los elementos horizontalmente */
+  gap: 2rem; /* Espacio entre los elementos */
+}
+
+/* Contenedor para enlaces (considerar renombrar para que sea más específico a su contenido) */
+.contenedor-enlaces {
+  display: flex; /* Habilitar el diseño flexbox */
+  justify-content: center; /* Centrar el contenido horizontalmente */
+  align-items: center; /* Centrar el contenido verticalmente */
+  gap: 3rem; /* Espacio entre los enlaces */
+}
+
+/* Estilos para el enlace de registro en la parte inferior del formulario */
+.my-form__signup {
+  display: flex; /* Habilitar el diseño flexbox */
+  justify-content: center; /* Centrar el enlace de registro */
+}
+
+/* Estilos para el enlace de registro */
+.my-form__signup a {
+  color: var(--primary); /* Color del enlace utilizando la variable definida */
+  font-weight: 800; /* Hacer que el texto sea negrita */
+  text-decoration: none; /* Eliminar la decoración de texto predeterminada */
+  font-size: 1.125rem; /* Tamaño de fuente */
+}
+
+/* Efecto hover para el enlace de registro */
+.my-form__signup a:hover {
+  text-decoration: underline; /* Agregar subrayado al pasar el ratón */
+}
+
+/* Estilos para el encabezado dentro del contenedor de enlaces */
+.contenedor-enlaces h3 {
+  font-size: 2rem; /* Tamaño de fuente del encabezado */
+}
+
+/* -------------------------------------------------- */
+/* Estilos del Campo de Texto (Input)                 */
+/* -------------------------------------------------- */
+
+/* Estilos para el elemento input dentro del campo de texto */
+.text-field input {
+  color: var(--secondary); /* Color del texto */
+  font-size: 1rem; /* Tamaño de fuente */
+  font-weight: 500; /* Peso de la fuente */
+  max-width: 100%; /* Ancho máximo */
+  width: 100%; /* Ocupar todo el ancho de su contenedor */
+  border: 1px solid var(--secondary); /* Estilo del borde */
+  height: 3rem; /* Altura del campo de entrada */
+  letter-spacing: 0.03rem; /* Espaciado entre letras */
+  background-color: transparent; /* Fondo transparente */
+  outline: none; /* Eliminar el contorno de enfoque predeterminado */
+  transition: 0.25s; /* Transición suave para el efecto de enfoque */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  text-indent: 1.5rem; /* Indentar el texto */
+  margin-top: 0.25rem; /* Margen superior */
+}
+
+/* Estilo para la etiqueta cuando el input dentro está enfocado */
+.text-field label:focus-within {
+  color: var(
+    --primary
+  ); /* Cambiar el color de la etiqueta cuando el input está enfocado */
+}
+
+/* Contenedor para el campo de texto (etiqueta e input) */
+.text-field {
+  position: relative; /* Necesario para el posicionamiento absoluto del icono SVG */
+}
+
+/* Estilos para el icono SVG dentro del campo de texto */
+.text-field svg {
+  position: absolute; /* Posicionar el icono SVG */
+  right: -0.125rem; /* Distancia desde la derecha */
+  bottom: -0.25rem; /* Distancia desde la parte inferior */
+  width: 1.875rem; /* Ancho del icono SVG */
+  height: 1.875rem; /* Altura del icono SVG */
+  transform: translate(-50%, -50%); /* Centrar el icono */
+  transform-origin: center; /* Establecer el origen para la transformación */
+}
+
+/* Estilo para el input cuando está enfocado */
+.text-field input:focus {
+  border: 1px solid var(--primary); /* Cambiar el color del borde al enfocar */
+}
+
+/* Estilo para el icono SVG cuando el input está enfocado */
+.text-field input:focus + svg {
+  stroke: var(
+    --primary
+  ); /* Cambiar el color del trazo del icono SVG al enfocar */
+}
+
+/* Estilos para la etiqueta del campo de texto */
+.text-field label {
+  color: var(--secondary); /* Color del texto */
+  font-size: 0.875rem; /* Tamaño de fuente */
+  font-weight: 600; /* Peso de la fuente */
+  letter-spacing: 0.03rem; /* Espaciado entre letras */
+  z-index: 10; /* Asegurar que la etiqueta esté por encima del input */
+}
+
+/* -------------------------------------------------- */
+/* Diseño Responsivo                                  */
+/* -------------------------------------------------- */
+
+/* Media query para pantallas con un ancho máximo de 640px */
+@media (max-width: 640px) {
+  /* Ajustar el diseño del contenedor del formulario para pantallas más pequeñas */
+  .form-wrapper {
+    grid-template-columns: 1fr; /* Hacer que los lados del formulario e información se apilen verticalmente */
+    height: 100vh; /* Establecer la altura a la altura completa de la ventana gráfica */
+  }
+
+  /* Ocultar el lado de información en pantallas más pequeñas */
+  .info-side {
+    display: none; /* Ocultar el lado de información */
+    flex-direction: column-reverse; /* Invertir la dirección del flex (podría no ser necesario si display es none) */
+    padding: 3rem 3rem 3rem 2rem; /* Ajustar el relleno */
+  }
+
+  /* Asegurar que los enlaces en el contenedor de enlaces se muestren en línea */
+  .contenedor-enlaces a {
+    display: inline-block; /* Mostrar los enlaces como bloques en línea */
+  }
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro ProVecol</title>
+    <link
+      rel="icon"
+      href="/imagenes/logoProvecolSinFondo.png"
+      type="image/webp"
+    />
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="estilos/style-registro.css" />
+  </head>
+
+  <body>
+    <!-- Contenedor principal del formulario y la sección informativa -->
+    <main class="form-wrapper">
+      <!-- Sección del formulario -->
+      <section class="form-side">
+        <!-- Logo con enlace a la página principal -->
+        <a href="index.html" title="Logo ProVecol" class="logo-link">
+          <img
+            src="/imagenes/logoProvecolSinFondo.png"
+            alt="Logo Provecol"
+            class="logo"
+          />
+        </a>
+
+        <!-- Formulario de registro -->
+        <form class="my-form" action="/regUsuario" method="post">
+          <!-- Título del formulario -->
+          <header class="login-welcome-row">
+            <h1>
+              Crea tu cuenta
+              <span role="img" aria-label="Manos aplaudiendo">&#x1F44F;</span>
+            </h1>
+          </header>
+
+          <!-- Opciones de registro con redes sociales -->
+          <div class="socials-row">
+            <a href="#" title="Usa Google" class="social-link">
+              <img src="/imagenes/icon_google.svg" alt="Ícono de Google" />
+              Regístrate con Google
+            </a>
+            <a href="#" title="Usa Facebook" class="social-link">
+              <img src="/imagenes/icono_facebook.svg" alt="Ícono de Facebook" />
+              Regístrate con Facebook
+            </a>
+          </div>
+
+          <!-- Separador -->
+          <div class="divider">
+            <span class="divider-line"></span>
+            O
+            <span class="divider-line"></span>
+          </div>
+
+          <!-- Campos del formulario -->
+          <div class="text-field">
+            <label for="email">
+              Correo electrónico:
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="off"
+                placeholder="Tu email"
+                required
+              />
+              <!-- Icono de correo -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+                <path
+                  d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28"
+                ></path>
+              </svg>
+            </label>
+          </div>
+
+          <div class="text-field">
+            <label for="password">
+              Contraseña:
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Tu contraseña"
+                title="Mínimo 6 caracteres, al menos 1 letra y 1 número"
+                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
+                required
+              />
+              <!-- Icono de candado -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z"
+                ></path>
+                <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path>
+                <path d="M8 11v-4a4 4 0 1 1 8 0v4"></path>
+              </svg>
+            </label>
+          </div>
+
+          <div class="text-field">
+            <label for="confirm-password">
+              Repite la contraseña:
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirmar-password"
+                placeholder="Repite tu contraseña"
+                title="Mínimo 6 caracteres, al menos 1 letra y 1 número"
+                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
+                required
+              />
+              <!-- Icono de candado -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z"
+                ></path>
+                <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path>
+                <path d="M8 11v-4a4 4 0 1 1 8 0v4"></path>
+              </svg>
+            </label>
+          </div>
+
+          <!-- Botón de envío -->
+          <button class="my-form__button" type="submit">Registrarse</button>
+
+          <!-- Enlace para usuarios existentes -->
+          <footer class="my-form__actions">
+            <div class="my-form__signup">
+              <a href="/" title="Iniciar sesión">
+                <h3>Ya tengo una cuenta</h3>
+              </a>
+            </div>
+          </footer>
+        </form>
+      </section>
+
+      <!-- Sección informativa -->
+      <aside class="info-side">
+        <img
+          src="/imagenes/construcción.webp"
+          alt="Imagen de construcción"
+          class="mockup"
+        />
+      </aside>
+    </main>
+
+    <!-- Scripts externos -->
+    <script src="/js/registro.js"></script>
+  </body>
+</html>
