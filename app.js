@@ -18,7 +18,7 @@ app.use(
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false },
-  })
+  }),
 );
 
 // Servir archivos estáticos desde la carpeta 'public'
@@ -32,6 +32,15 @@ const codLoginRouter = require("./rutas/codLogin"); // Importa el router de codL
 // Ruta principal con mensaje opcional desde query string
 app.get("/", (req, res) => {
   res.render("index", { mensaje: req.query.mensaje }); // Pasamos el mensaje a la vista
+});
+
+app.get("/registro", (req, res) => {
+  res.render("registro", { mensaje: req.query.mensaje }); // Renderiza el archivo 'registro.ejs' y pasa el mensaje opcional
+});
+
+app.get("/inicio_sesion", (req, res) => {
+  console.log("Mensaje desde la URL:", req.query.mensaje); // Para verificar en la consola del servidor
+  res.render("inicio_sesion", { mensaje: req.query.mensaje }); // Renderiza el archivo 'inicio_sesion.ejs' y pasa el mensaje
 });
 
 // Subrutas

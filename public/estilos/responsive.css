@@ -1,0 +1,78 @@
+/* ============= */
+/* 📱 RESPONSIVE */
+/* ============= */
+
+@media (max-width: 1024px) {
+  .carousel-item {
+    flex: 0 0 25%;
+    min-width: 220px;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+}
+
+/*dispositivo movil*/
+
+@media (max-width: 768px) {
+  /* ✅ Estilos para el menú móvil */
+
+  .logo img {
+    max-width: 100px;
+    margin-bottom: 0; /* Elimina el margen inferior para que no empuje el contenido */
+  }
+
+  header nav .hamburger {
+    display: block;
+  }
+
+  .hamburger {
+    font-size: 1.5rem;
+    color: black;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .hamburger i {
+    background-color: blsck;
+    color: black;
+  }
+
+  /* ✅ Mostrar/ocultar menú móvil */
+  .nav-links {
+    display: none; /* oculto por defecto */
+  }
+
+  .nav-links.hidden {
+    display: none; /* también oculto */
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    z-index: 999;
+    width: 40%;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    backdrop-filter: blur(30px);
+    border-radius: 5px;
+  }
+
+  .nav-links.active li a {
+    text-align: right;
+    width: 100%;
+    font-weight: 500;
+    color: #2c5282;
+  }
+}

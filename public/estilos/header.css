@@ -1,0 +1,134 @@
+/* ======================== */
+/* 🚀 ENCABEZADO / NAVBAR  */
+/* ======================== */
+
+header {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+.logo img {
+  margin-top: 30px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  max-height: 150px;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.hamburger {
+  display: none; /* Oculto por defecto en pantallas grandes */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color, black); /* Usa una variable o un color fijo */
+  padding: 0.5rem;
+
+}
+
+.hamburger.active {
+  transform: rotate(90deg);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  color: black;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: orange;
+  text-shadow: none;
+}
+
+/* 👤 Tooltip en ícono de login */
+.nav-link.login-icon {
+  position: relative;
+}
+
+.nav-link.login-icon[data-tooltip]::before,
+.nav-link.login-icon[data-tooltip]::after {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
+  z-index: 10;
+}
+
+.nav-link.login-icon[data-tooltip]::before {
+  content: attr(data-tooltip);
+  background-color: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  margin-top: 50px;
+}
+
+.nav-link.login-icon[data-tooltip]::after {
+  content: "";
+  border-style: solid;
+  border-width: 5px;
+  border-color: #333 transparent transparent transparent;
+  bottom: 100%;
+  transform: translateX(-50%);
+  margin-bottom: 5px;
+}
+
+.nav-link.login-icon[data-tooltip]:hover::before,
+.nav-link.login-icon[data-tooltip]:hover::after {
+  visibility: visible;
+  opacity: 1;
+}

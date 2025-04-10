@@ -2,30 +2,26 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-
-    <title>Inicio de ProVecol</title>
-
     <meta name="description" content="Inicio de sesión en ProVecol" />
-
     <meta name="author" content="Gustavo Piedrahita" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio de ProVecol</title>
 
     <link
       rel="icon"
-      href="imagenes/logoProvecolSinFondo.png"
+      href="/imagenes/logoProvecolSinFondo.png"
       type="image/x-icon"
     />
 
     <title>Distribuciones ProVecol</title>
-
+    <link rel="stylesheet" href="/estilos/responsive-inicio_sesion.css" />
     <link rel="stylesheet" href="/estilos/style-inicio_sesion.css" />
   </head>
 
   <body>
     <div class="form-wrapper">
       <div class="form-side">
-        <a href="index.html" title="Logo ProVecol">
+        <a href="/" title="Logo ProVecol">
           <img
             class="logo"
             src="/imagenes/logoProvecolSinFondo.png"
@@ -35,12 +31,13 @@
 
         <form action="/auth/login" method="POST" class="my-form">
           <% if (mensaje) { %>
-          <p class="error-message"><%= mensaje %></p>
+          <div class="success-message"><%= mensaje %></div>
           <% } %>
           <div class="login-welcome-row">
             <h1>Bienvenido 🤝</h1>
           </div>
 
+          <!--
           <div class="socials-row">
             <a href="#" title="Usa Google">
               <img src="/imagenes/icon_google.svg" alt="Google" />
@@ -52,11 +49,13 @@
               Continuar con Facebook
             </a>
           </div>
+          
 
           <div class="divider">
             <span class="divider-line"></span> O
             <span class="divider-line"></span>
           </div>
+                -->
 
           <div class="text-field">
             <label for="email">
@@ -135,21 +134,16 @@
                 <a href="#" title="Reset Password"> Reiniciar contraseña </a>
               </div>
 
-              <a href="/registro.html" title="registro"><h3>Registrarme</h3></a>
+              <a href="/registro" title="registro"><h3>Registrarme</h3></a>
             </div>
           </div>
         </form>
       </div>
 
       <div class="info-side">
-        <img src="/imagenes/construcción.webp" alt="imagen" class="mockup" />  
-
-        <div class="welcome-message">
-          <p>Tus ideas, tus historias, tus aportes.</p>
-        </div>
+        <img src="/imagenes/construcción.webp" alt="imagen" class="mockup" />
+        <p>Tus ideas, tus historias, tus aportes.</p>
       </div>
     </div>
-
-    <script src="/js/inicio-sesion.js"></script>
   </body>
 </html>

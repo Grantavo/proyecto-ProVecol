@@ -4,24 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ProveCol</title>
+
+    <!-- 🎨 Estilos -->
     <link rel="stylesheet" href="/estilos/style.css" />
+    <link rel="stylesheet" href="/estilos/responsive.css" />
+    <link rel="stylesheet" href="/estilos/header.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
   </head>
+
   <body>
+    <!-- ==================== -->
+    <!-- 🧭 HEADER / NAVBAR -->
+    <!-- ==================== -->
     <header>
       <nav>
+        <!-- Logo -->
         <div class="logo">
           <a href="/">
             <img src="/imagenes/logoProvecolSinFondo.png" alt="Logo" />
           </a>
         </div>
+
+        <!-- Botón de menú hamburguesa -->
         <button id="menu-btn" class="hamburger">
-          <i id="fas fa-bars"></i>
+          <i class="fas fa-bars"></i>
         </button>
 
+        <!-- Menú de navegación móvil -->
         <ul id="mobile-menu" class="nav-links hidden">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="productos.html">Productos</a></li>
@@ -41,6 +53,9 @@
       </nav>
     </header>
 
+    <!-- =============== -->
+    <!-- 🦸 HERO SECTION -->
+    <!-- =============== -->
     <main>
       <section id="hero">
         <div class="hero-content">
@@ -49,8 +64,8 @@
             Descubre una grán variedad de materiales y equipos profesionales
             para el sector de la construcción
           </p>
-          <a href="#productos"
-            ><button class="cta-button">Explorar Productos</button>
+          <a href="#productos">
+            <button class="cta-button">Explorar Productos</button>
           </a>
         </div>
       </section>
@@ -303,6 +318,9 @@
         </div>
       </section>
 
+      <!-- ===================== -->
+      <!-- 💎 CARACTERÍSTICAS -->
+      <!-- ===================== -->
       <section id="features">
         <div class="feature">
           <i class="fas fa-truck"></i>
@@ -321,7 +339,9 @@
         </div>
       </section>
 
-      <!-- Seccion de contacto -->
+      <!-- ===================== -->
+      <!-- 📬 FORMULARIO CONTACTO -->
+      <!-- ===================== -->
       <section id="contact">
         <h2>Contáctanos</h2>
         <form id="contact-form">
@@ -334,10 +354,13 @@
       </section>
     </main>
 
+    <!-- ================ -->
+    <!-- 🦶 PIE DE PÁGINA -->
+    <!-- ================ -->
     <footer>
       <div class="footer-content">
         <div class="footer-section">
-          <h4>Sobre nosostros</h4>
+          <h4>Sobre nosotros</h4>
           <p>Somos distribuidores de todos los materiales de construcción</p>
         </div>
 
@@ -345,15 +368,14 @@
           <h4>Contacto</h4>
           <p>
             Correo electrónico:
-            <a href="mailto:provecol.pasto@hotmail.com" target="_blank"
-              ><br />provecol.pasto@hotmail.com</a
-            >
+            <a href="mailto:provecol.pasto@hotmail.com" target="_blank">
+              <br />provecol.pasto@hotmail.com
+            </a>
           </p>
-          <p>celular: 313 6144980</p>
+          <p>Celular: 313 6144980</p>
         </div>
 
         <div class="footer-section">
-          <!-- Sección: Redes sociales -->
           <h4>Síguenos</h4>
           <div class="social-links">
             <a
@@ -374,18 +396,23 @@
           </div>
         </div>
       </div>
+
       <div class="footer-bottom">
         <p>&copy; 2025 ProveCol. Todos los derechos reservados.</p>
         <p>Hecho por Gustavo Piedrahita 🐈‍⬛</p>
       </div>
     </footer>
 
-    <!-- Botón flotante de WhatsApp -->
+    <!-- =============================== -->
+    <!-- 💬 BOTÓN FLOTANTE DE WHATSAPP -->
+    <!-- =============================== -->
     <a href="https://wa.me/573136144980" target="_blank" class="whatsapp-float">
       <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- =================== -->
+    <!-- 🚀 Scripts -->
+    <!-- =================== -->
     <script type="module" src="/js/main.js"></script>
-    <script src="/js/mensajeRegistro.js"></script>
   </body>
 </html>
